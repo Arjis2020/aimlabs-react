@@ -13,9 +13,10 @@ function App() {
         <ModalHandler />
         <div className='app__container__header'>
           <Timer />
-          <Score />
+          {/* <Score /> */}
         </div>
         <TargetContainer />
+        <Score />
       </div>
     </div>
   );

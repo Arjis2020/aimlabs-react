@@ -38,13 +38,13 @@ const targetSlice = createSlice({
       if (state.lastHitTimestamp !== -1) {
         const delta = currentTimestamp - state.lastHitTimestamp;
         if (delta < 350) {
-          multiplier = 50;
+          multiplier = 10;
         }
         else if (delta < 420) {
-          multiplier = 30;
+          multiplier = 5;
         }
         else if (delta < 500) {
-          multiplier = 20;
+          multiplier = 2;
         }
       }
       state.multiplier = multiplier;
