@@ -1,0 +1,17 @@
+.app {
+  height: 100%;
+  cursor: crosshair;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__header {
+      width: 100%;
+      padding-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
