@@ -1,12 +1,15 @@
 import React from 'react'
-import Modal from '../Modal/Modal'
+import video from '../../assets/videos/main-menu.mp4';
 import './mainMenu.scss';
 
 export default function MainMenu() {
   return (
-    <Modal>
-      <div className='main-menu'>
-        <ul className='main-menu__list'>
+    <div className='main-menu'>
+      <video autoPlay muted loop>
+        <source src={video} type='video/mp4' />
+      </video>
+      <div className='main-menu__content'>
+        <ul>
           <li>Play</li>
           <li>How to play</li>
           <li>Options</li>
@@ -14,6 +17,6 @@ export default function MainMenu() {
           <li>Exit</li>
         </ul>
       </div>
-    </Modal>
+    </div>
   )
 }

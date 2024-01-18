@@ -1,3 +1,4 @@
+import MainMenu from '../MainMenu/MainMenu';
 import ModalHandler from '../Modal/ModalHandler';
 import Score from '../Score/Score';
 import TargetContainer from '../TargetContainer/TargetContainer';
@@ -11,12 +12,12 @@ function App() {
     <div className='app'>
       <div className='app__container'>
         <ModalHandler />
-        <div className='app__container__header'>
+        {/* <div className='app__container__header'>
           <Timer />
-          {/* <Score /> */}
         </div>
         <TargetContainer />
-        <Score />
+        <Score /> */}
+        <MainMenu />
       </div>
     </div>
   );

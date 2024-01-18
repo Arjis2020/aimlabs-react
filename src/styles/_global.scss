@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
+@font-face {
+  font-family: Mangold;
+  src: url('../assets/fonts/mangold.ttf');
+}
+
 body {
   background: rgb(2, 0, 60);
   padding-inline: 24px;
