@@ -2,4 +2,4 @@ export interface IInitialModalState {
   type: TModal;
   isOpen: boolean;
 }
-export type TModal = '' | 'main';
+export type TModal = '' | 'pause';

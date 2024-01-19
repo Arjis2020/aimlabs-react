@@ -10,7 +10,7 @@
   }
   &__content {
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -23,9 +23,15 @@
     ul {
       list-style: none;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       
       li {
         @extend .anim-slide-left;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
         font-size: 4rem;
         text-transform: uppercase;
         font-family: Mangold, sans-serif;
@@ -37,12 +43,27 @@
         &:not(:first-child) {
           margin-top: 18px;
         }
+        &::before {
+          content: '';
+          height: 12px;
+          width: 12px;
+          transform: rotate(45deg);
+          background-color: white;
+          display: block;
+          opacity: 0;
+          transition: 0.3s ease all;
+        }
         &:hover {
           opacity: 1;
           transform: scale(1.1);
           color: wheat;
           -webkit-text-stroke-color: transparent;
           cursor: pointer;
+
+          &::before {
+            opacity: 1;
+            transform: rotate(225deg);
+          }
         }
       }
     }

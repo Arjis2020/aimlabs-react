@@ -6,7 +6,7 @@ export default function ModalHandler() {
   const { modal } = useModalHandler();
   return (
     <>
-      {modal.type === 'main' && modal.isOpen && <PauseMenu />}
+      {modal.type === 'pause' && modal.isOpen && <PauseMenu />}
     </>
   )
 }

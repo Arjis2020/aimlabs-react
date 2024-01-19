@@ -1,5 +1,6 @@
 import MainMenu from '../MainMenu/MainMenu';
 import ModalHandler from '../Modal/ModalHandler';
+import ModeSelectionMenu from '../ModeSelectionMenu/ModeSelectionMenu';
 import Score from '../Score/Score';
 import TargetContainer from '../TargetContainer/TargetContainer';
 import Timer from '../Timer/Timer';
@@ -18,6 +19,7 @@ function App() {
         <TargetContainer />
         <Score /> */}
         <MainMenu />
+        {/* <ModeSelectionMenu /> */}
       </div>
     </div>
   );

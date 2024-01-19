@@ -7,7 +7,7 @@ export const useApp = () => {
 
   function keyDownHandler(e: KeyboardEvent) {
     if (e.key === 'Escape') {
-      dispatch(toggleModal('main'));
+      dispatch(toggleModal('pause'));
     }
   }
 
