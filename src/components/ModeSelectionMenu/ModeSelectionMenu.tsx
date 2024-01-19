@@ -5,15 +5,15 @@ import CrosshairIcon from '../../assets/icons/crosshair-on-circle.svg';
 import CircleIcon from '../../assets/icons/circle.svg';
 import SpeedIcon from '../../assets/icons/speed.svg';
 import ModeSelectionMenuHeader from './ModeSelectionMenuHeader';
-import hoverSoftCut from '../../assets/sounds/menu/hover-soft-cut.mp3';
+import hover from '../../assets/sounds/menu/hover.mp3';
 import './modeSelectionMenu.scss';
 
 export default function ModeSelectionMenu() {
-  const [play] = useSound(hoverSoftCut, { volume: 0.5, playbackRate: 1.5 });
+  const [play] = useSound(hover, { volume: 0.4, playbackRate: 1 });
   return (
     <div className='mode-selection-menu'>
       <ModeSelectionMenuHeader />
-      <div className='mode-selection-menu__card-container anim-fade-zoom-in anim-delay-500ms' onMouseEnter={() => play()}>
+      <div className='mode-selection-menu__card-container anim-fade-zoom-in-left anim-delay-300ms' onMouseEnter={() => play()}>
         <div className='mode-selection-menu__card-container__card mode-selection-menu__card-container__card--accuracy'>
           <div className='mode-selection-menu__card-container__card__img-container mode-selection-menu__card-container__card--accuracy__img-container'>
             <img src={AccuracyIcon} />
@@ -36,7 +36,7 @@ export default function ModeSelectionMenu() {
           </div>
         </div>
       </div>
-      <div className='mode-selection-menu__card-container anim-fade-zoom-in anim-delay-500ms' onMouseEnter={() => play()}>
+      <div className='mode-selection-menu__card-container anim-fade-zoom-in-right anim-delay-300ms' onMouseEnter={() => play()}>
         <div className='mode-selection-menu__card-container__card mode-selection-menu__card-container__card--speed'>
           <div className='mode-selection-menu__card-container__card__img-container mode-selection-menu__card-container__card--speed__img-container'>
             <img src={SpeedIcon} className="img-max" />

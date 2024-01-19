@@ -7,7 +7,7 @@ import './mainMenu.scss';
 
 export default function MainMenu() {
   useMainMenu();
-  const [play] = useSound(hoverSfx, { volume: 0.7, playbackRate: 2 });
+  const [play] = useSound(hoverSfx, { volume: 1, playbackRate: 2 });
   const menuItems = ['Play', 'How to play', 'Options', 'Settings', 'Exit'];
   return (
     <div className='main-menu'>
@@ -16,7 +16,7 @@ export default function MainMenu() {
       </video>
       <div className='main-menu__content'>
         <ul>
-          {menuItems.map((item) => <li key={item} onMouseEnter={() => play()}>{item}</li>)}
+          {menuItems.map((item, i) => <li key={item} onMouseEnter={() => play()} style={{ animationDelay: `${10 * (i * 10)}ms` }}>{item}</li>)}
         </ul>
       </div>
     </div>
