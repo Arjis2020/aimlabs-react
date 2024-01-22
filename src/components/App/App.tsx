@@ -1,3 +1,4 @@
+import Arena from '../Arena/Arena';
 import MainMenu from '../MainMenu/MainMenu';
 import ModalHandler from '../Modal/ModalHandler';
 import ModeSelectionMenu from '../ModeSelectionMenu/ModeSelectionMenu';
@@ -19,7 +20,8 @@ function App() {
         <TargetContainer />
         <Score /> */}
         {/* <MainMenu /> */}
-        <ModeSelectionMenu />
+        {/* <ModeSelectionMenu /> */}
+        <Arena />
       </div>
     </div>
   );
