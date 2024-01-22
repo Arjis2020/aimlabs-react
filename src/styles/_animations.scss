@@ -29,6 +29,11 @@
   animation: fade-zoom-in-right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
+.anim-slide-top {
+  transform: translateY(-100px);
+  animation: slide-top 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
 $delays: 300ms, 700ms, 1000ms;
 
 @each $delay in $delays {
@@ -97,5 +102,14 @@ $delays: 300ms, 700ms, 1000ms;
   100% {
     transform: translateX(0) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translate(0px);
   }
 }

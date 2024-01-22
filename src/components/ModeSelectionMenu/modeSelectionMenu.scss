@@ -90,8 +90,8 @@
           &.active {
             opacity: 1;
             &::after {
-              transform: scale(1);
               opacity: 1;
+              transform: scale(1);
             }
           }
         }

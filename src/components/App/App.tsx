@@ -18,8 +18,8 @@ function App() {
         </div>
         <TargetContainer />
         <Score /> */}
-        <MainMenu />
-        {/* <ModeSelectionMenu /> */}
+        {/* <MainMenu /> */}
+        <ModeSelectionMenu />
       </div>
     </div>
   );

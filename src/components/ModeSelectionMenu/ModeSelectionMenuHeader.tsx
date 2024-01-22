@@ -8,15 +8,18 @@ export default function ModeSelectionMenuHeader() {
   const [active, setActive] = useState<number>(0);
   return (
     <header className='mode-selection-menu__header'>
-      <div className='mode-selection-menu__header__back-nav'>Back</div>
+      <div className='mode-selection-menu__header__back-nav'>PLAY</div>
       <div className='mode-selection-menu__header__nav-container'>
         <ul>
           {navigations.map((nav, i) => <li
-            {...i === active && { className: 'active' }}
-            onMouseEnter={() => play()}
+            key={nav}
+            className={i === active ? 'active' : ''}
+            onMouseEnter={() => i !== active && play()}
             onClick={() => setActive(i)}
           >
-            {nav}
+            <span className='anim-slide-top' style={{
+              animationDelay: `${10 * (i * 10)}ms`,
+            }}>{nav}</span>
           </li>)}
         </ul>
       </div>
