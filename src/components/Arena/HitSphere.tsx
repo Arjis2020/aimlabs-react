@@ -14,7 +14,7 @@ export default function HitSphere() {
     <Suspense fallback={null}>
       <mesh castShadow position={[0, 1, 0]}>
         <sphereGeometry attach='geometry' args={[0.4, 50, 50]} />
-        <meshLambertMaterial attach='material' color="blue" opacity={30} transparent />
+        <meshLambertMaterial attach='material' color="orange" opacity={30} />
       </mesh>
     </Suspense>
   )

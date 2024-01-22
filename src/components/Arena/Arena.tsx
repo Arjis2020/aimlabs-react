@@ -5,6 +5,7 @@ import './arena.scss';
 import { OrbitControls, Sky } from '@react-three/drei';
 import CameraControls from './CameraControls';
 import Plane from './Plane';
+import SkyBox from './SkyBox';
 
 export default function Arena() {
   return (
@@ -30,11 +31,16 @@ export default function Arena() {
         enablePan={false}
         enableRotate={false}
         enableZoom={false} />
-      <Sky
+      {/* <Sky
         distance={500000}
         sunPosition={[15, 30, -10]}
         inclination={0}
-        azimuth={0.25} />
+        azimuth={0.25} /> */}
+      <SkyBox />
+      <fog
+        attach='fog'
+        args={['grey', 1, 500]}
+      />
     </Canvas>
   )
 }

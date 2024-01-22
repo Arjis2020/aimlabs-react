@@ -7,7 +7,5 @@ export default function CameraControls() {
     camera.rotateY(-state.pointer.x);
     camera.rotateX(state.pointer.y);
   });
-  return (
-    <></>
-  )
+  return <></>;
 }
