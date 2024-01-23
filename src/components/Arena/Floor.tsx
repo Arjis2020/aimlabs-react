@@ -3,7 +3,7 @@ import { useTexture } from '@react-three/drei'
 import * as THREE from 'three';
 import floorTexture from '../../assets/textures/grid-texture.png';
 
-export default function Plane() {
+export default function Floor() {
   const texture = useTexture(floorTexture);
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
@@ -11,10 +11,10 @@ export default function Plane() {
   texture.repeat.y = 70;
 
   return (
-    <Suspense>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -50, 0]}>
-        <planeGeometry attach='geometry' args={[800, 5000, 50]} />
-        <meshBasicMaterial attach='material' map={texture} transparent/>
+    <Suspense fallback={<div>Loading...</div>}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -50, 0]} receiveShadow>
+        <planeGeometry attach='geometry' args={[250, 1000, 50]} />
+        <meshStandardMaterial attach='material' metalness={1} color='black' />
       </mesh>
     </Suspense>
   )
