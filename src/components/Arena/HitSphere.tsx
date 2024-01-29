@@ -1,20 +1,22 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useRef } from 'react';
 import { extend } from '@react-three/fiber';
-import { SphereGeometry } from 'three';
-import { useTexture } from '@react-three/drei';
-import ballTexture from '../../assets/textures/criss-cross-texture.png';
+import { Mesh, SphereGeometry } from 'three';
 
 extend({
   SphereGeometry
 });
 
-export default function HitSphere() {
-  const texture = useTexture(ballTexture);
+type TProps = {
+  position?: [number, number, number],
+};
+
+export default function HitSphere(props: TProps) {
+  const sphereRef = useRef<Mesh>(new Mesh());
   return (
     <Suspense fallback={null}>
-      <mesh castShadow position={[0, 1, 0]}>
-        <sphereGeometry attach='geometry' args={[0.4, 50, 50]} />
-        <meshLambertMaterial attach='material' color="orange" opacity={30} />
+      <mesh ref={sphereRef} position={props.position || [0, 0, 0]}>
+        <sphereGeometry attach='geometry' args={[0.12, 50, 50]} />
+        <meshStandardMaterial attach='material' color='orange' />
       </mesh>
     </Suspense>
   )

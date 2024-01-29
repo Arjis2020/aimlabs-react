@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@types/uuid": "^9.0.7",
+    "gltfjsx": "^6.2.16",
     "sass": "^1.69.7"
   }
 }
